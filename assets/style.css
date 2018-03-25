@@ -1,7 +1,6 @@
 body{
 	background:url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Grand_Central_Terminal%2C_New_York_City_%285903663780%29.jpg");
 	background-size: 100%;
-	background-repeat: no-repeat;
 	color: black;
   }
 
@@ -23,7 +22,6 @@ body{
   
   .panel-body{
 	border:2px black;
-	background-color: inherit;
   }
   .current ,.add{
 	background-color:rgb(208, 221, 29);
