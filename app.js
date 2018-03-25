@@ -18,7 +18,7 @@ $('#addTrainBtn').on("click", function() {
   var destination = $("#destinationInput").val().trim();
   var firstTrain = moment($("#timeInput").val().trim(), "HH:mm").format("HH:mm");
   var frequency = $("#frequencyInput").val().trim();
-  // Create local temp obj holding train data
+  // local temp obj holding train data
   var newTrain = {
       name: trainName,
       place: destination,
