@@ -17,7 +17,7 @@ body{
 	border:2px black;
   }
   .current ,.add{
-	background-color:rgb(185, 241, 255);
+	background-color:rgb(208, 221, 29);
 	color:black;
 	font-size:20px;
   }
@@ -35,8 +35,9 @@ body{
   .form-group{
 	color: black;
 	font-size:20px;
+	background-color: rgb(205, 194, 92);
   }
   .btn{
-	background-color:green;
+	background-color:rgb(84, 131, 84);
 	font-size:20px;
   }
