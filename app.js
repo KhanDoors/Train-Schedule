@@ -13,50 +13,49 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 $('#addTrainBtn').on("click", function() {
-  // take user input
+  // Input
   var trainName = $("#trainNameInput").val().trim();
   var destination = $("#destinationInput").val().trim();
   var firstTrain = moment($("#timeInput").val().trim(), "HH:mm").format("HH:mm");
   var frequency = $("#frequencyInput").val().trim();
-  // to create local temporary object to hold train data
+  // Create local temp obj holding train data
   var newTrain = {
       name: trainName,
       place: destination,
       ftrain: firstTrain,
       freq: frequency
     }
-    // uploads train data to the database
+    // upload to DB
   database.ref().push(newTrain);
-  console.log(newTrain.name);
-  // clears all the text-boxes
+  
+  // clear boxes
   $("#trainNameInput").val("");
   $("#destinationInput").val("");
   $("#timeInput").val("");
   $("#frequencyInput").val("");
-  // Prevents moving to new page
+  // stops from moving to new page
   return false;
 });
-//  Created a firebase event listner for adding trains to database and a row in the html when the user adds an entry
+//  Create a firebase event listner for adding trains to db and row in HTML when entry added
 database.ref().on("child_added", function(childSnapshot) {
-  console.log(childSnapshot.val());
-  // Now we store the childSnapshot values into a variable
+  
+  // Store childSnapshot values in a var
   var trainName = childSnapshot.val().name;
   var destination = childSnapshot.val().place;
   var firstTrain = childSnapshot.val().ftrain;
   var frequency = childSnapshot.val().freq;
-  // first Train pushed back to make sure it comes before current time
+  // Next train set to ensure it comes after current time
   var firstTimeConverted = moment(firstTrain, "HH:mm");
-  console.log(firstTimeConverted);
+  
   var currentTime = moment().format("HH:mm");
-  console.log("CURRENT TIME: " + currentTime);
-  // store difference between currentTime and fisrt train converted in a variable.
+  
+  // Fisrt train diff from current time into var
   var timeDiff = moment().diff(moment(firstTimeConverted), "minutes");
-  console.log(firstTrain);
-  console.log("Difference in Time: " + timeDiff);
-  // find Remainder of the time left and store in a variable
+  
+  // Remainder time left store in var
   var timeRemainder = timeDiff % frequency;
-  console.log(timeRemainder);
-  // to calculate minutes till train,we store it in a variable
+  
+  // minutes to train - store as var
   var minToTrain = frequency - timeRemainder;
   // next train
   var nxTrain = moment().add(minToTrain, "minutes").format("HH:mm");
