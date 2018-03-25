@@ -17,12 +17,12 @@ body{
 	border:2px black;
   }
   .current ,.add{
-	background-color:peachpuff;
+	background-color:rgb(185, 241, 255);
 	color:black;
 	font-size:20px;
   }
   #trainTable{
-	background-color:#efffff;
+	background-color:gold;
 	color:black;
 	font-size:20px;
 	font: bold;
@@ -30,7 +30,7 @@ body{
   #trainNameInput,#destinationInput,#timeInput,#frequencyInput{
 	color:black;
 	font-size:18px;
-	background-color:#efffff;
+	background-color:gold;
   }
   .form-group{
 	color: black;
