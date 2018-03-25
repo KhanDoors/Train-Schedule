@@ -1,19 +1,20 @@
 body{
-	background:url("http://blog.hdwallsource.com/wp-content/uploads/2016/01/train-track-wallpapers-37967-38837-hd-wallpapers.jpg");
+	background:url("https://secure.i.telegraph.co.uk/multimedia/archive/02467/grand-alamy_2467882b.jpg");
   }
   .jumbotron{
-	background-color:#efffff;
-	color:black;
-	border:5px grey solid;
-  font: 2em Arial,sans-serif;
+	background-color: gold;
+	color: rgb(167, 122, 86);
+	border:2px rgb(22, 17, 17) solid;
+	font-style: italic;
+	font-family: Georgia, 'Times New Roman', Times, serif;  
   }
   .ride{
 	font-size:40px;
-	color:blue;
+	color:rgb(59, 55, 32);
   }
   
   .panel-body{
-	border:5px grey solid;
+	border:2px black;
   }
   .current ,.add{
 	background-color:peachpuff;
