@@ -1,9 +1,17 @@
 body{
-	background:url("https://secure.i.telegraph.co.uk/multimedia/archive/02467/grand-alamy_2467882b.jpg");
+	background:url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Grand_Central_Terminal%2C_New_York_City_%285903663780%29.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: black;
   }
+
+  * {
+	box-sizing: border-box;
+  }
+  
   .jumbotron{
-	background-color: gold;
-	color: rgb(167, 122, 86);
+	background-color: inherit;
+	color: black;
 	border:2px rgb(22, 17, 17) solid;
 	font-style: italic;
 	font-family: Georgia, 'Times New Roman', Times, serif;  
@@ -15,6 +23,7 @@ body{
   
   .panel-body{
 	border:2px black;
+	background-color: inherit;
   }
   .current ,.add{
 	background-color:rgb(208, 221, 29);
